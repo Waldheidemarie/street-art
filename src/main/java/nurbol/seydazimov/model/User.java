@@ -5,6 +5,12 @@ public class User {
     String mail;
     String password;
 
+    public User(String username, String mail, String password) {
+        this.username = username;
+        this.mail = mail;
+        this.password = password;
+    }
+
     public void setUsername(String username) {
         this.username = username;
     }
