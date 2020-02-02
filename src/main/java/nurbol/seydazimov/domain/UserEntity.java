@@ -7,20 +7,18 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "users")
-public class User {
+public class UserEntity {
     @Id
-    UUID id;
-    String username;
-    String email;
+    private final UUID id;
+    private final String username;
+    private final String email;
+    private final String hashedPassword;
 
-    public User(UUID id, String username, String email) {
+    public UserEntity(UUID id, String username, String email, String hashedPassword) {
         this.id = id;
         this.username = username;
         this.email = email;
-    }
-
-    public User() {
-
+        this.hashedPassword = hashedPassword;
     }
 
     public UUID getId() {
@@ -33,5 +31,9 @@ public class User {
 
     public String getEmail() {
         return email;
+    }
+
+    public String getHashedPassword() {
+        return hashedPassword;
     }
 }
