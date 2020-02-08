@@ -2,18 +2,21 @@ package nurbol.seydazimov.services;
 
 import nurbol.seydazimov.domain.UserEntity;
 import nurbol.seydazimov.model.User;
+import nurbol.seydazimov.repository.UserRepository;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit.jupiter.SpringExtension;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
 
-@ExtendWith(SpringExtension.class)
-@SpringBootTest
+@ExtendWith(MockitoExtension.class)
 public class UserServiceTest {
-    @Autowired
+    @InjectMocks
     private UserService userService;
+
+    @Mock
+    private UserRepository userRepository;
 
     @Test
     void test() {
