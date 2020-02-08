@@ -8,7 +8,8 @@ plugins {
 group 'org.example'
 version '1.0-SNAPSHOT'
 
-sourceCompatibility = 1.8
+sourceCompatibility = 12
+targetCompatibility = 12
 
 configurations {
     developmentOnly
